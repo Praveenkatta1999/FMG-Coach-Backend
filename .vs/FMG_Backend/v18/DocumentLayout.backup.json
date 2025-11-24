@@ -1,0 +1,318 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\FMG_project\\FMG-Coach-Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\fmg_backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:fmg_backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\database\\fmgdatabase_test.sqbpro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:database\\fmgdatabase_test.sqbpro||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asus\\Desktop\\Coach_Hire_Response.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\getallcoachesresponse.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:getallcoachesresponse.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\services\\coachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:services\\coachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\getcoachesbyteamidresponse.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:getcoachesbyteamidresponse.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\dto\\gameaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:dto\\gameaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asus\\Desktop\\Coach_GetById_Response.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\dto\\coachhireresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:dto\\coachhireresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\database\\fmgdatabase_test.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:database\\fmgdatabase_test.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\data\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:data\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\dto\\teamaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:dto\\teamaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\dto\\coachhirerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:dto\\coachhirerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|e:\\fmg_project\\fmg-coach-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CE72DE9-D227-F600-8D4E-0B794E1DDAC6}|FMG_Backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Coach_Hire_Response.json",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\Coach_Hire_Response.json",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\Coach_Hire_Response.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T19:05:35.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameAddRequest.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\GameAddRequest.cs",
+              "RelativeDocumentMoniker": "DTO\\GameAddRequest.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\GameAddRequest.cs",
+              "RelativeToolTip": "DTO\\GameAddRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:06:34.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FMG_Backend.http",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\FMG_Backend.http",
+              "RelativeDocumentMoniker": "FMG_Backend.http",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\FMG_Backend.http",
+              "RelativeToolTip": "FMG_Backend.http",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAuwIIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-10-06T07:00:08.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FMGDatabase_Test.sqbpro",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Database\\FMGDatabase_Test.sqbpro",
+              "RelativeDocumentMoniker": "Database\\FMGDatabase_Test.sqbpro",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Database\\FMGDatabase_Test.sqbpro",
+              "RelativeToolTip": "Database\\FMGDatabase_Test.sqbpro",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-06T17:20:44.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllCoachesResponse.json",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\GetAllCoachesResponse.json",
+              "RelativeDocumentMoniker": "GetAllCoachesResponse.json",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\GetAllCoachesResponse.json",
+              "RelativeToolTip": "GetAllCoachesResponse.json",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T17:34:55.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetCoachesByTeamIDResponse.json",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\GetCoachesByTeamIDResponse.json",
+              "RelativeDocumentMoniker": "GetCoachesByTeamIDResponse.json",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\GetCoachesByTeamIDResponse.json",
+              "RelativeToolTip": "GetCoachesByTeamIDResponse.json",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwEQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T17:34:49.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoachController.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\CoachController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoachController.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\CoachController.cs",
+              "RelativeToolTip": "Controllers\\CoachController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwG0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T07:04:42.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoachService.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Services\\CoachService.cs",
+              "RelativeDocumentMoniker": "Services\\CoachService.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Services\\CoachService.cs",
+              "RelativeToolTip": "Services\\CoachService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowE0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:30:58.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Coach_GetById_Response.json",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\Coach_GetById_Response.json",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\Coach_GetById_Response.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T18:38:23.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CoachHireResponse.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\CoachHireResponse.cs",
+              "RelativeDocumentMoniker": "DTO\\CoachHireResponse.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\CoachHireResponse.cs",
+              "RelativeToolTip": "DTO\\CoachHireResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:06:24.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TeamAddRequest.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\TeamAddRequest.cs",
+              "RelativeDocumentMoniker": "DTO\\TeamAddRequest.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\TeamAddRequest.cs",
+              "RelativeToolTip": "DTO\\TeamAddRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:06:40.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameDbContext.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Data\\GameDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\GameDbContext.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Data\\GameDbContext.cs",
+              "RelativeToolTip": "Data\\GameDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:16:58.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FMGDatabase_Test.db",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Database\\FMGDatabase_Test.db",
+              "RelativeDocumentMoniker": "Database\\FMGDatabase_Test.db",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Database\\FMGDatabase_Test.db",
+              "RelativeToolTip": "Database\\FMGDatabase_Test.db",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGHSURBVDhPjZPNSxtBGIefXTcSYlv2T1CKWAVFSgsVvClCexBEqteK5yJEl22gheLBD4KCIPpneGwp4hcKNdQqiGDxkNBW8WI\u002BDtltkp2Ml\u002B6iO8b4wMB8/N6HeWFG4z8J20qDbPbXKlrGqzKUTCaPgi0pZTBP2FOyXC7XHAl7Sk5//pSzLKs7KAL0m4t6vBsbNx83RTdvSh4sME2T1ZVlXNc1DV1uhs\u002BVFtZ3f8hvOymlFb8dv065wclZhq/b\u002B2Rzea6yOda\u002BbPHz\u002BDQcC1AEhq7jOC4vutp52d2B4zoYhhILUE48IahUyoiqoCoEXqWC54lwLEARlEolNGBrL8XG7nc0DVIHhzjuv3AU7hI873zGyOAATx7FEJ7g4vKc33//MLe4xOmvs3BcFfgMvenndV8vhXyBmY82\u002BWyWaLQxHKstACgWHQwd3sctIpGGWy/X515BW\u002BtTPsQn6O15xcLcDC3N6le5VwDQFIsx\u002BnY4vB1QV1APzZ8k7Mk0aOod70RmZucXWgCuAZnTw6qHi\u002BiqAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-10-08T20:38:56.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CoachHireRequest.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\CoachHireRequest.cs",
+              "RelativeDocumentMoniker": "DTO\\CoachHireRequest.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\DTO\\CoachHireRequest.cs",
+              "RelativeToolTip": "DTO\\CoachHireRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T18:06:18.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-07T06:48:47.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameService.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Services\\GameService.cs",
+              "RelativeDocumentMoniker": "Services\\GameService.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Services\\GameService.cs",
+              "RelativeToolTip": "Services\\GameService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAIwDEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T07:39:39.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:28:47.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TeamController.cs",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\TeamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeamController.cs",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Controllers\\TeamController.cs",
+              "RelativeToolTip": "Controllers\\TeamController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:27:40.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\FMG_project\\FMG-Coach-Backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "E:\\FMG_project\\FMG-Coach-Backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-07T06:53:08.763Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

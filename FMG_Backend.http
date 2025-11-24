@@ -4,3 +4,134 @@ GET {{FMG_Backend_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{FMG_Backend_HostAddress}}/api/coach/all
+Accept: application/json
+
+### Get details of a specific coach
+GET {{FMG_Backend_HostAddress}}/api/coach/90cd3f49-9863-4cd8-b89f-1ced8a82ec08
+Accept: application/json
+
+### Hire a coach
+PATCH {{FMG_Backend_HostAddress}}/api/coach/hire
+Content-Type: application/json
+
+{
+  "coachId": "9d50398c-407e-4bab-a272-9b24047ab704",
+  "teamId": "99d0319f-0fd4-409f-a828-c9aec14caa99"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Discover allowed verbs on /api/team
+OPTIONS {{FMG_Backend_HostAddress}}/api/team
+
+### Try PUT
+PUT http://localhost:5175/api/team
+Content-Type: application/json
+
+{
+  "teamId": "TEAM_A",
+  "teamName": "Team A"
+}
+
+### Create Team B
+PUT {{FMG_Backend_HostAddress}}/api/team
+Content-Type: application/json
+
+{
+  "teamId": "TEAM_B",
+  "teamName": "Team B"
+}
+
+### Create/Upsert Team C
+PUT {{FMG_Backend_HostAddress}}/api/team
+Content-Type: application/json
+
+{
+  "teamId": "TEAM_C",
+  "teamName": "Team C"
+}
+
+### Check both teams exist
+GET {{FMG_Backend_HostAddress}}/api/coach/teamDetails/TEAM_A
+Accept: application/json
+
+###
+GET {{FMG_Backend_HostAddress}}/api/coach/teamDetails/TEAM_B
+Accept: application/json
+
+
+### HIRE (PATCH with JSON body)
+PATCH {{FMG_Backend_HostAddress}}/api/coach/hire
+Content-Type: application/json
+
+{
+  "coachId": "b730ba7c-1939-4b04-896d-0d31ab6406b7",
+  "teamId": "TEAM_A"
+}
+
+### FIRE (PATCH with JSON body)
+PATCH {{FMG_Backend_HostAddress}}/api/coach/fire
+Content-Type: application/json
+
+{
+  "coachId": "b730ba7c-1939-4b04-896d-0d31ab6406b7",
+  "teamId": "TEAM_A"
+}
+
+### Team aggregate still consistent
+GET http://localhost:5175/api/coach/teamDetails/TEAM_A
+Accept: application/json
+
+###
+PATCH http://localhost:5175/api/coach/hire
+Content-Type: application/json
+
+{
+  "coachId": "a15acfe3-33e5-4ecd-a2c2-ba76515ee4a1",
+  "teamId": "TEAM_A"
+}
+
+###
+GET http://localhost:5175/api/coach/teamDetails/TEAM_A
+Accept: application/json
+
+###
+GET http://localhost:5175/api/coach/team/TEAM_A
+Accept: application/json
+
+### FIRE a coach
+PATCH {{FMG_Backend_HostAddress}}/api/coach/fire
+Content-Type: application/json
+
+{
+  "coachId": "a15acfe3-33e5-4ecd-a2c2-ba76515ee4a1",
+  "teamId": "TEAM_A"
+}
+
+### Create/Upsert Team D
+PUT {{FMG_Backend_HostAddress}}/api/team
+Content-Type: application/json
+
+{
+  "teamId": "TEAM_D",
+  "teamName": "Team D"
+}

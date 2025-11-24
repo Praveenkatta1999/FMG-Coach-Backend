@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Transactions;
 
 public class GameService
 {
@@ -27,43 +28,54 @@ public class GameService
     // create a game
     public async Task<Game> CreateGame(GameAddRequest request)
     {
-        var game = new Game(request.league, request.coachBonusAppliedPercent)
+        await using var tx = await _db.Database.BeginTransactionAsync();
+        try
         {
-            matchId = request.matchId,
-            homeTeam = request.homeTeam,
-            awayTeam = request.awayTeam,
-            result = request.result,
-        };
+            var game = new Game(request.league, request.coachBonusAppliedPercent)
+            {
+                matchId = request.matchId,
+                homeTeam = request.homeTeam,
+                awayTeam = request.awayTeam,
+                result = request.result,
+            };
 
-        Team homeTeam = await _teamService.GetTeamById(request.homeTeam);
+            var homeTeam = await _teamService.GetTeamById(request.homeTeam);
 
-        game.homeTeamOffenceCoach = homeTeam.offenceCoach;
-        game.homeTeamDefenceCoach = homeTeam.defenceCoach;
-        game.homeTeamSpecialTeamsCoach = homeTeam.speacialTeamsCoach;
+            game.homeTeamOffenceCoach = homeTeam.offenceCoach;
+            game.homeTeamDefenceCoach = homeTeam.defenceCoach;
+            game.homeTeamSpecialTeamsCoach = homeTeam.speacialTeamsCoach;
 
-        Team awayTeam = await _teamService.GetTeamById(request.awayTeam);
+            var awayTeam = await _teamService.GetTeamById(request.awayTeam);
 
-        game.awayTeamOffenceCoach = awayTeam.offenceCoach;
-        game.awayTeamDefenceCoach = awayTeam.defenceCoach;
-        game.awayTeamSpecialTeamCoach = awayTeam.speacialTeamsCoach;
+            game.awayTeamOffenceCoach = awayTeam.offenceCoach;
+            game.awayTeamDefenceCoach = awayTeam.defenceCoach;
+            game.awayTeamSpecialTeamCoach = awayTeam.speacialTeamsCoach;
 
-        // write updateCoachStat method in coach_service
+            // write updateCoachStat method in coach_service
 
-        _coachService.UpdateCoachStats(
-            game.homeTeamOffenceCoach,
-            game.homeTeamDefenceCoach,
-            game.homeTeamSpecialTeamsCoach,
-            game.awayTeamOffenceCoach,
-            game.awayTeamDefenceCoach,
-            game.awayTeamSpecialTeamCoach,
-            game.result
-        );
+            await _coachService.UpdateCoachStats(
+             game.homeTeamOffenceCoach,
+             game.homeTeamDefenceCoach,
+             game.homeTeamSpecialTeamsCoach,
+             game.awayTeamOffenceCoach,
+             game.awayTeamDefenceCoach,
+             game.awayTeamSpecialTeamCoach,
+             game.result
+         );
 
-        // update Teams record for games won and lost along with the coach stats
 
-        _db.Add(game);
-        await _db.SaveChangesAsync();
+            // update Teams record for games won and lost along with the coach stats
 
-        return game;
+            _db.Add(game);
+            await _db.SaveChangesAsync();
+
+            await tx.CommitAsync();
+            return game;
+        }
+        catch
+        {
+            await tx.RollbackAsync();
+            throw;
+        }
     }
 }

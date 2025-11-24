@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Transactions;
 
 public class CoachService
 {
@@ -67,63 +68,73 @@ public class CoachService
 
     public async Task<CoachHireResponse> HireCoach(string coachId, string teamId)
     {
-        Team team = await _teamService.GetTeamById(teamId);
-        Coach coach = await _db.Coaches.FirstOrDefaultAsync(c => c.coachId == coachId);
+        await using var tx = await _db.Database.BeginTransactionAsync();
+        try
+        { 
+            Team team = await _teamService.GetTeamById(teamId);
+            Coach coach = await _db.Coaches.FirstOrDefaultAsync(c => c.coachId == coachId);
 
-        string coachType = coach.coachType;
-        float coachRating = coach.overallRating;
-        float team_budget = team.budget;
+            string coachType = coach.coachType;
+            float coachRating = coach.overallRating;
+            float team_budget = team.budget;
 
-        string message = "";
+            string message = "";
 
-        // Check if the coach is affordable
-        if (!await IsCoachAffordableAsync(coachId, teamId))
-        {
-            throw new Exception("Coach is not affordable");
+            // Check if the coach is affordable
+            if (!await IsCoachAffordableAsync(coachId, teamId))
+            {
+                throw new Exception("Coach is not affordable");
+            }
+
+            switch (coachType)
+            {
+                case "O":
+                    if (team.offenceCoach != null)
+                        throw new Exception("Offence coach already hired");
+                    team.offenceCoach = coachId;
+                    message = "Offence coach hired";
+                    team.offenceRating = coachRating;
+                    break;
+
+                case "D":
+                    if (team.defenceCoach != null)
+                        throw new Exception("Defence coach already hired");
+                    team.defenceCoach = coachId;
+                    message = "Defence coach hired";
+                    team.defenceRating = coachRating;
+                    break;
+
+                case "ST":
+                    if (team.speacialTeamsCoach != null)
+                        throw new Exception("Special teams coach already hired");
+                    team.speacialTeamsCoach = coachId;
+                    message = "Special teams coach hired";
+                    team.specialTeamsRating = coachRating;
+                    break;
+
+                default:
+                    throw new Exception("Invalid coach type");
+            }
+
+            team.budget = team_budget - coach.totalCost;
+
+            float teamRating = GetTeamRating(team);
+            team.overallRating = teamRating;
+
+            coach.currentTeam = team.teamId;
+
+
+            await _db.SaveChangesAsync();
+
+            await tx.CommitAsync();
+            return new CoachHireResponse(message, team);
         }
-
-        switch (coachType)
+        catch
         {
-            case "O":
-                if (team.offenceCoach != null)
-                    throw new Exception("Offence coach already hired");
-                team.offenceCoach = coachId;
-                message = "Offence coach hired";
-                team.offenceRating = coachRating;
-                break;
-
-            case "D":
-                if (team.defenceCoach != null)
-                    throw new Exception("Defence coach already hired");
-                team.defenceCoach = coachId;
-                message = "Defence coach hired";
-                team.defenceRating = coachRating;
-                break;
-
-            case "ST":
-                if (team.speacialTeamsCoach != null)
-                    throw new Exception("Special teams coach already hired");
-                team.speacialTeamsCoach = coachId;
-                message = "Special teams coach hired";
-                team.specialTeamsRating = coachRating;
-                break;
-
-            default:
-                throw new Exception("Invalid coach type");
+            await tx.RollbackAsync();
+            throw;
+        
         }
-
-        team.budget = team_budget - coach.totalCost;
-
-        float teamRating = GetTeamRating(team);
-        team.overallRating = teamRating;
-
-        coach.currentTeam = team.teamId;
-
-
-        await _db.SaveChangesAsync();
-
-
-        return new CoachHireResponse(message, team);
 
     }
 
@@ -147,66 +158,75 @@ public class CoachService
 
     public async Task<CoachHireResponse> FireCoach(string coachId, string teamId)
     {
-        Team team = await _teamService.GetTeamById(teamId);
-        Coach coach = await _db.Coaches.FirstOrDefaultAsync(c => c.coachId == coachId);
-
-        string coachType = coach.coachType;
-        float weekly_salary = coach.salary;
-
-        float team_budget = team.budget;
-
-        string message = "";
-
-        switch (coachType)
+        await using var tx = await _db.Database.BeginTransactionAsync();
+        try
         {
-            case "O":
-                team.offenceCoach = null;
-                team.offenceRating = 1;
-                message = "Offence coach fired";
-                break;
+            Team team = await _teamService.GetTeamById(teamId);
+            Coach coach = await _db.Coaches.FirstOrDefaultAsync(c => c.coachId == coachId);
 
-            case "D":
-                team.defenceCoach = null;
-                team.defenceRating = 1;
-                message = "Defence coach fired";
-                break;
+            string coachType = coach.coachType;
+            float weekly_salary = coach.salary;
 
-            case "ST":
+            float team_budget = team.budget;
 
-                team.speacialTeamsCoach = null;
-                team.specialTeamsRating = 1;
-                message = "Special teams  fired";
-                break;
+            string message = "";
 
-            default:
-                throw new Exception("Invalid coach type");
+            switch (coachType)
+            {
+                case "O":
+                    team.offenceCoach = null;
+                    team.offenceRating = 1;
+                    message = "Offence coach fired";
+                    break;
+
+                case "D":
+                    team.defenceCoach = null;
+                    team.defenceRating = 1;
+                    message = "Defence coach fired";
+                    break;
+
+                case "ST":
+
+                    team.speacialTeamsCoach = null;
+                    team.specialTeamsRating = 1;
+                    message = "Special teams  fired";
+                    break;
+
+                default:
+                    throw new Exception("Invalid coach type");
+            }
+
+            team.budget = team_budget + weekly_salary;
+
+            float teamRating = GetTeamRating(team);
+            team.overallRating = teamRating;
+
+            coach.prevTeam = team.teamId;
+            coach.currentTeam = null;
+            coach.current_team_games_played = 0;
+            coach.current_team_games_won = 0;
+            coach.current_team_games_lost = 0;
+            coach.current_team_games_tie = 0;
+
+            // TODO: call updateCoach method and include above coach stat updation in it as well
+
+            await _db.SaveChangesAsync();
+            await tx.CommitAsync();
+
+            return new CoachHireResponse(message, team);
         }
-
-        team.budget = team_budget + weekly_salary;
-
-        float teamRating = GetTeamRating(team);
-        team.overallRating = teamRating;
-
-        coach.prevTeam = team.teamId;
-        coach.currentTeam = null;
-        coach.current_team_games_played = 0;
-        coach.current_team_games_won = 0;
-        coach.current_team_games_lost = 0;
-        coach.current_team_games_tie = 0;
-
-        // TODO: call updateCoach method and include above coach stat updation in it as well
-
-        await _db.SaveChangesAsync();
-
-        return new CoachHireResponse(message, team);
-
+        catch
+        {
+            await tx.RollbackAsync();
+            throw;
+        }
     }
 
 
     // TODO: write UpdateCoach method to update his wins-loss, ratings and salary
 
 
-    public async void UpdateCoachStats(string homeTeamOffenceCoachId, string homeTeamDefenceCoachId, string homeTeamSpecialTeamsCoachId, string awayTeamOffenceCoachId, string awayTeamDefenceCoachId, string awayTeamSpecialTeamsCoachId, string result)
+    public async Task UpdateCoachStats(string homeTeamOffenceCoachId, string homeTeamDefenceCoachId, string homeTeamSpecialTeamsCoachId, string awayTeamOffenceCoachId, string awayTeamDefenceCoachId, string awayTeamSpecialTeamsCoachId, string result)
     {
         if (result == "H")
         {
@@ -253,7 +273,7 @@ public class CoachService
                 awayTeamSpecialTeamsCoach.current_team_games_lost++;
             }
 
-            await _db.SaveChangesAsync();
+            
         }
         else if (result == "A")
         {
